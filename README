@@ -1,0 +1,27 @@
+SoXer: Written by Samuel Ramambason
+
+audio files -> RESQUE(soxi + sox -> metadata + plot points -> REDIS)
+
+Requirements:
+Ruby 1.9.3, Redis(~>2.2.2), SoX(~>1.4.0)
+For MP3 support, check Sox's dependencies (libid3tag, libmad, and madplay libs)
+
+
+To run:
+
+Start Redis
+
+Start your Resque workers:
+
+	rake resque:work QUEUE='audio_file_parsing'
+  rake resque:work QUEUE=''audio_plot_points_to_redis''
+
+Enqueue your 'AudioFileParser' jobs in 'audio_file_parsing' queue:
+
+	ruby scripts/resquer.rb.
+	
+These jobs in turn push 'AudioPlots' jobs into the 'audio_plot_points_to_redis' queue.
+
+
+To Do:
+I'm guessing a lot...
