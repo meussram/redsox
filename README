@@ -1,4 +1,4 @@
-SoXer: Written by Samuel Ramambason
+RedSoX: Written by Samuel Ramambason
 
 audio files -> RESQUE(soxi + sox -> metadata + plot points -> REDIS)
 
@@ -24,4 +24,4 @@ These jobs in turn push 'AudioPlots' jobs into the 'audio_plot_points_to_redis' 
 
 
 To Do:
-I'm guessing a lot...
+I'm guessing, a whole lot
