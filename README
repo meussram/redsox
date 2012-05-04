@@ -14,7 +14,7 @@ Start Redis
 Start your Resque workers:
 
   rake resque:work QUEUE='audio_file_parsing'
-  rake resque:work QUEUE=''audio_plot_points_to_redis''
+  rake resque:work QUEUE='audio_plot_points_to_redis'
 
 Enqueue your 'AudioFileParser' jobs in 'audio_file_parsing' queue:
 
