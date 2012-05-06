@@ -1,0 +1,57 @@
+<html>
+	<head>
+	    <title>Sound Plotter</title>
+	    <link href="/css/layout.css" rel="stylesheet" type="text/css">
+		<script language="javascript" type="text/javascript" src="/js/jquery.js"></script>
+	    <script language="javascript" type="text/javascript" src="/js/jquery.flot.js"></script>
+	    <script language="javascript" type="text/javascript" src="/js/jquery.flot.selection.js"></script>
+		<script language="javascript" type="text/javascript" src="/js/script.js"></script> 
+	</head>
+	<body>
+	<div id="header">
+	<h1>Sound Plotter <span class="ascii">¸.·´¯`·.´¯`·.¸¸.·´¯`·.¸><(((º></span></h1>
+	</div>
+	<div id="content">
+		<div id="left">
+		
+			<p>Ruby class project:<br/>
+				Daniel Salo &amp; Samuel Ramambason<br/>
+				<a href="https://github.com/meussram/wav">GitHub</a>
+			</p>
+			
+		</div>
+		<div id="right">
+			<h2>Upload a File!</h2>
+			<form method="post" enctype='multipart/form-data' action="/upload">
+				<input size="30" class="upload_file" type="file" name="sound" />
+				<input type="submit" value="Upload">
+			</form>
+		</div>
+		<p id="zoomp"><label><input id="zoom" type="checkbox" /><span class="small">Zoom to selection</span></label></p>
+		<div class="clear"></div>
+		<div id="placeholder" style="width:900px;height:100px;"></div>
+		<div class="density">
+			<h2>Plot Density</h2>
+			<span class="zoom" zoom="800">800</span> |
+			<span class="zoom" zoom="1600">1,600</span> |
+			<span class="zoom" zoom="3200">3,200</span> |
+			<span class="zoom" zoom="4000">4,000</span> |
+			<span class="zoom" zoom="9000">9,000</span> |
+			<span class="zoom" zoom="20000">20,000</span> |
+			<span class="zoom default" zoom="100000">100,000</span>
+		</div>
+		<div id="zoomlevel">
+			<!--
+			<input id="clearSelection" type="button" value="Clear selection" />
+			<p>You selected: <span id="selection"></span></p>
+			<span class="plus">
+				
+			</span>
+			<span class="minus">
+				
+			</span>
+			-->
+		</div>
+	</div>
+ </body>
+</html>

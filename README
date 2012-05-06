@@ -18,7 +18,7 @@ Start your Resque workers:
 
 Enqueue your 'AudioFileParser' jobs in 'audio_file_parsing' queue:
 
-	ruby scripts/resquer.rb.
+  ruby scripts/resquer.rb.
 	
 These jobs in turn push 'AudioPlots' jobs into the 'audio_plot_points_to_redis' queue.
 

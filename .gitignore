@@ -8,8 +8,4 @@
 /.bundle
 
 # Ignore all logfiles and tempfiles.
-/log/*.log
 /tmp
-
-/audio_files/*
-/audio_dat/*

@@ -1,0 +1,24 @@
+<html>
+	<head>
+	    <title>Sound Plotter</title>
+	    <link href="/css/layout.css" rel="stylesheet" type="text/css">
+		<script language="javascript" type="text/javascript" src="/js/jquery.js"></script>
+	    <script language="javascript" type="text/javascript" src="/js/jquery.flot.js"></script>
+	    <script language="javascript" type="text/javascript" src="/js/jquery.flot.selection.js"></script>
+		<script language="javascript" type="text/javascript" src="/js/script.js"></script> 
+	</head>
+	<body>
+	<div id="header">
+	<h1>Sound Plotter <span class="ascii">¸.·´¯`·.´¯`·.¸¸.·´¯`·.¸><(((º></span></h1>
+	</div>
+	<div id="content">
+		<div id="right">
+			<h2>Upload a File!</h2>
+			<form method="post" enctype='multipart/form-data' action="/upload">
+				<input size="30" class="upload_file" type="file" name="sound" />
+				<input type="submit" value="Upload">
+			</form>
+		</div>
+	</div>
+ </body>
+</html>
