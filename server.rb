@@ -26,7 +26,7 @@ class MyApp < Sinatra::Base
   
 
   post '/upload' do
-    configuration_root_dir = File.join(File.dirname(__FILE__),"","conf")
+    configuration_root_dir = File.join(File.dirname(__FILE__),"","config")
     resources_config_file = YAML::load_file("#{configuration_root_dir}/resources.yml")
     @audio_files_dir = "#{File.join(File.dirname(__FILE__),"","#{resources_config_file["audio_files"]}")}"
  

@@ -20,7 +20,7 @@ class AudioFileParser
     @log = Logger.new("#{File.dirname(__FILE__)}/../log/main.log")
     @log.level = Logger::DEBUG
     
-    configuration_root_dir = File.join(File.dirname(__FILE__),"..","conf")
+    configuration_root_dir = File.join(File.dirname(__FILE__),"..","config")
     resources_config_file = YAML::load_file("#{configuration_root_dir}/resources.yml")    
     @audio_files_dir = "#{File.join(File.dirname(__FILE__),"..","#{resources_config_file["audio_files"]}")}"
     @dat_files_dir =  "#{File.join(File.dirname(__FILE__),"..","#{resources_config_file["audio_dat_files"]}")}"
