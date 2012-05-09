@@ -8,7 +8,7 @@ class Sox
   
   def initialize
     
-    configuration_root_dir = File.join(File.dirname(__FILE__),"..","config")
+    configuration_root_dir = File.join(File.dirname(__FILE__),"..","conf")
     sox_config_file = YAML::load_file("#{configuration_root_dir}/sox.yml")
     @install_dir = sox_config_file["install_dir"]
     
