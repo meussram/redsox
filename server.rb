@@ -5,6 +5,7 @@ require 'sinatra/base'
 require 'yaml'
 require 'resque'
 require File.expand_path('../lib/audio_file_parser', __FILE__)
+require File.expand_path('../wrappers/redis_instance', __FILE__)
 
 class MyApp < Sinatra::Base
   
@@ -13,8 +14,9 @@ class MyApp < Sinatra::Base
 	set :static, true
 	set :public, File.dirname(__FILE__) + '/public'
 	enable :sessions
-
-
+  
+  redis = Redis.new(RedisInstance.config)
+  
   get '/' do
     erb :index
   end
