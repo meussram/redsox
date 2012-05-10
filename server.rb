@@ -15,7 +15,7 @@ class MyApp < Sinatra::Base
 	set :public, File.dirname(__FILE__) + '/public'
 	enable :sessions
   
-  redis = Redis.new(RedisInstance.config)
+  @redis = Redis.new(RedisInstance.config)
   
   get '/' do
     erb :index
@@ -41,22 +41,22 @@ class MyApp < Sinatra::Base
   
 
   get '/:id/plots' do
-  	audio_json = redis.hget("audio_files:#{params[:id]}", "json_plots")
+  	audio_json = @redis.hget("audio_files:#{params[:id]}", "json_plots")
   end
 
 
   get '/:id/timestamps' do 
-  	timestamps = redis.hget("audio_files:#{params[:id]}", "timestamps")
+  	timestamps = @redis.hget("audio_files:#{params[:id]}", "timestamps")
   end
 
 
   get '/:id/metadata' do
     meta={}
 
-    keys = redis.hkeys("audio_files:#{params[:id]}")
+    keys = @redis.hkeys("audio_files:#{params[:id]}")
     keys.each do |k|
       unless k == "json_plots" or k == "timestamps"
-        meta[k] = redis.hget("audio_files:#{params[:id]}", "#{k}")
+        meta[k] = @redis.hget("audio_files:#{params[:id]}", "#{k}")
       end
     end
     meta.inspect
