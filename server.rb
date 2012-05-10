@@ -9,13 +9,12 @@ require File.expand_path('../wrappers/redis_instance', __FILE__)
 
 class MyApp < Sinatra::Base
   
-  configure { set :server, :puma }
+  # configure { set :server, :puma }
 
 	set :static, true
 	set :public, File.dirname(__FILE__) + '/public'
 	enable :sessions
   
-  @redis = Redis.new(RedisInstance.config)
   
   get '/' do
     erb :index
@@ -41,7 +40,8 @@ class MyApp < Sinatra::Base
   
 
   get '/:id/plots' do
-  	audio_json = @redis.hget("audio_files:#{params[:id]}", "json_plots")
+    redis = Redis.new(RedisInstance.config)
+  	audio_json = redis.hget("audio_files:#{params[:id]}", "json_plots")
   end
 
 
@@ -51,12 +51,13 @@ class MyApp < Sinatra::Base
 
 
   get '/:id/metadata' do
+    redis = Redis.new(RedisInstance.config)
     meta={}
 
-    keys = @redis.hkeys("audio_files:#{params[:id]}")
+    keys = redis.hkeys("audio_files:#{params[:id]}")
     keys.each do |k|
       unless k == "json_plots" or k == "timestamps"
-        meta[k] = @redis.hget("audio_files:#{params[:id]}", "#{k}")
+        meta[k] = redis.hget("audio_files:#{params[:id]}", "#{k}")
       end
     end
     meta.inspect
@@ -64,4 +65,4 @@ class MyApp < Sinatra::Base
   
 end
 
-# MyApp.run!  #if $0 == __FILE__
+MyApp.run!  #if $0 == __FILE__
