@@ -1,5 +1,5 @@
 require 'open3'
-require 'YAML'
+require 'yaml'
 
 class Sox
   

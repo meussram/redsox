@@ -2,7 +2,7 @@ require 'rubygems'
 require 'sinatra'
 require 'sinatra/reloader'
 require 'sinatra/base' 
-require 'YAML'
+require 'yaml'
 require 'resque'
 require File.expand_path('../lib/audio_file_parser', __FILE__)
 

@@ -1,5 +1,6 @@
 source :rubygems
 
+gem 'rake'
 gem 'puma'
 gem 'sinatra'
 gem 'sinatra-reloader'
