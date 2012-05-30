@@ -1,0 +1,18 @@
+I, [2012-05-10T13:09:37.729256 #37201]  INFO -- : 2012-05-10 13:09:37 -0700: Getting metadata for: 3373__suonho__cartoonist_03_micious_suonho_.wav
+I, [2012-05-10T13:09:38.157664 #37201]  INFO -- : 2012-05-10 13:09:38 -0700: metadata:
+{"filename"=>"3373__suonho__cartoonist_03_micious_suonho_.wav", "channels"=>"2", "sample_rate"=>"44100", "precision"=>"16-bit", "duration"=>"00:00:11.56", "number_of_samples"=>"509952", "file_size"=>"2.04M", "bit_rate"=>"1.41M", "sample_encoding"=>"16-bit Signed Integer PCM"}
+I, [2012-05-10T13:09:38.190998 #37201]  INFO -- : 2012-05-10 13:09:38 -0700: Output Sample Rate: 44100
+
+I, [2012-05-10T13:09:38.230587 #37201]  INFO -- : 2012-05-10 13:09:38 -0700: parsing failed - 3373__suonho__cartoonist_03_micious_suonho_.wav
+I, [2012-05-10T13:09:38.303102 #37204]  INFO -- : 2012-05-10 13:09:38 -0700: Getting metadata for: 3373__suonho__cartoonist_03_micious_suonho_.wav
+I, [2012-05-10T13:09:38.310099 #37204]  INFO -- : 2012-05-10 13:09:38 -0700: metadata:
+{"filename"=>"3373__suonho__cartoonist_03_micious_suonho_.wav", "channels"=>"2", "sample_rate"=>"44100", "precision"=>"16-bit", "duration"=>"00:00:11.56", "number_of_samples"=>"509952", "file_size"=>"2.04M", "bit_rate"=>"1.41M", "sample_encoding"=>"16-bit Signed Integer PCM"}
+I, [2012-05-10T13:09:38.312529 #37204]  INFO -- : 2012-05-10 13:09:38 -0700: Output Sample Rate: 44100
+
+I, [2012-05-10T13:09:38.318764 #37204]  INFO -- : 2012-05-10 13:09:38 -0700: parsing failed - 3373__suonho__cartoonist_03_micious_suonho_.wav
+I, [2012-05-10T13:10:33.352906 #37225]  INFO -- : 2012-05-10 13:10:33 -0700: Getting metadata for: 3373__suonho__cartoonist_03_micious_suonho_.wav
+I, [2012-05-10T13:10:33.412221 #37225]  INFO -- : 2012-05-10 13:10:33 -0700: metadata:
+{"filename"=>"3373__suonho__cartoonist_03_micious_suonho_.wav", "channels"=>"2", "sample_rate"=>"44100", "precision"=>"16-bit", "duration"=>"00:00:11.56", "number_of_samples"=>"509952", "file_size"=>"2.04M", "bit_rate"=>"1.41M", "sample_encoding"=>"16-bit Signed Integer PCM"}
+I, [2012-05-10T13:10:33.414678 #37225]  INFO -- : 2012-05-10 13:10:33 -0700: Output Sample Rate: 44100
+
+I, [2012-05-10T13:10:33.420953 #37225]  INFO -- : 2012-05-10 13:10:33 -0700: parsing failed - 3373__suonho__cartoonist_03_micious_suonho_.wav
