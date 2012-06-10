@@ -46,6 +46,7 @@ class MyApp < Sinatra::Base
 
 
   get '/:id/timestamps' do 
+    redis = Redis.new(RedisInstance.config)
   	timestamps = redis.hget("audio_files:#{params[:id]}", "timestamps")
   end
 
