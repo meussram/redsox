@@ -9,7 +9,7 @@ require File.expand_path('../wrappers/redis_instance', __FILE__)
 
 class MyApp < Sinatra::Base
   
-  # configure { set :server, :puma }
+  configure { set :server, :puma }
 
 	set :static, true
 	set :public, File.dirname(__FILE__) + '/public'
@@ -66,4 +66,4 @@ class MyApp < Sinatra::Base
   
 end
 
-MyApp.run!  #if $0 == __FILE__
+# MyApp.run!  #if $0 == __FILE__
